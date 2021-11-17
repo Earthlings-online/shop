@@ -1,0 +1,91 @@
+.overlay
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, .5)
+	z-index: 1
+	visibility: hidden
+	opacity: 0
+	overflow: hidden
+	transition: opacity .3s ease-in-out, visibility .3s ease-in-out
+
+.visible
+	visibility: visible
+	opacity: 1
+	.drawer
+		transform: translateX(0)
+
+.drawer
+	position: absolute
+	width: 420px
+	height: 100%
+	right: 0
+	background-color: #fff
+	box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1)
+	padding: 30px
+	display: flex
+	flex-direction: column
+	transform: translateX(100%)
+	transition: transform .3s ease-in-out
+
+	> h2
+		margin-top: 0
+		margin-bottom: 25px
+		display: flex
+		justify-content: space-between
+		img
+			cursor: pointer
+
+.items
+	flex: 1
+	overflow: auto
+	margin-bottom: 40px
+
+.item
+	display: flex
+	align-items: center
+	border: 1px solid #F3F3F3
+	border-radius: 20px
+	overflow: hidden
+	padding: 20px
+	margin-bottom: 20px
+
+	.img
+		margin-right: 20px
+		margin-top: -10px
+
+	.text
+		margin-right: 20px
+
+	h3
+		margin-top: 0
+		margin-bottom: 5px
+		font-weight: 400
+		font-size: 16px
+
+	b
+		font-size: 14px
+
+	.remove
+		cursor: pointer
+		opacity: .5
+		transition: opacity .2s ease-in-out
+		&:hover
+			opacity: 1
+
+.total
+	ul
+		margin-bottom: 30px
+	li
+		display: flex
+		align-items: flex-end
+		margin-bottom: 20px
+	div
+		flex: 1
+		height: 1px
+		border-bottom: 1px dashed #DFDFDF
+		position: relative
+		top: -4px
+		margin: 0 8px

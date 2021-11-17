@@ -1,0 +1,101 @@
+body
+	margin: 0
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	line-height: 1.5
+
+*
+	font-family: 'Inter', sans-serif
+	box-sizing: border-box
+
+a
+	color: inherit
+	text-decoration: none
+
+ul
+	margin: 0
+	padding: 0
+	li
+		list-style-type: none
+
+.wrapper
+	max-width: 1170px
+	margin: 0 auto
+	padding: 45px
+
+.content
+	padding-top: 45px
+
+	h1
+		margin-top: 0
+		margin-bottom: 0
+
+.section-head
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 40px
+
+.search-block
+	border: 1px solid #F3F3F3
+	display: flex
+	border-radius: 10px
+	padding: 0 15px
+	position: relative
+	&_clear
+		position: absolute
+		right: 10px
+		top: 12px
+		cursor: pointer
+
+	input
+		border: 0
+		padding: 12px
+		font-size: 16px
+		outline: none
+		width: 200px
+
+.cards
+	display: flex
+	flex-wrap: wrap
+
+.btn
+	width: 100%
+	height: 55px
+	background-color: #7EC91F
+	border-radius: 18px
+	border: 0
+	color: #fff
+	font-size: 16px
+	font-weight: 500
+	cursor: pointer
+	transition: background-color .2s ease-in-out
+	position: relative
+	img
+		position: absolute
+		right: 30px
+		top: 20px
+		transition: transform .2s ease-in-out
+	&:hover
+		background-color: lighten(#7EC91F, 7%)
+		img
+			transform: translateX(5px)
+	&:active
+		background-color: darken(#7EC91F, 2%)
+	&:disabled
+		background-color: #bebebe
+		cursor: default
+		img
+			transform: none
+
+.btn-order
+	&:disabled
+		animation: btn-loading .6s ease-in-out infinite
+
+@keyframes btn-loading
+	0%
+		opacity: 1
+	50%
+		opacity: .7
+	100%
+		opacity: 1
